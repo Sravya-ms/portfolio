@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
+        <meta name="description" content="Projects by Maheswari Sravya: FoodLoop AI and AI Startup Idea Validator." />
         <meta name="author" content="" />
         <title>Projects | Maheswari Sravya</title>
         <!-- Favicon-->
@@ -16,7 +16,11 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-    </head>
+    <style>
+            .project-carousel .carousel-item img { max-height: 560px; width: 100%; object-fit: contain; background: #0b0d14; }
+            #foodloopCarousel .carousel-item img { background: #f8f9fa; }
+        </style>
+        </head>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Navigation-->
@@ -42,29 +46,148 @@
                     </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <!-- Project Card 1-->
+                            <!-- Project Card 1: FoodLoop AI-->
                             <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                                 <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">AI Startup Idea Validator</h2>
-                                            <p>Developed an AI-powered startup validation platform that analyzes startup ideas using intelligent agents and real-time web search. The system evaluates business potential, identifies competitors, provides AI-driven recommendations, and generates structured reports to help entrepreneurs make informed business decisions.</p>
-                                            <p><strong>Technologies:</strong><br>Python • Streamlit • LangChain • Groq API • DuckDuckGo Search • Git</p>
+                                    <div class="p-5">
+                                        <h2 class="fw-bolder">FoodLoop AI &ndash; Smart Food Redistribution Platform</h2>
+                                        <p>A full-stack web platform that connects verified food donors (campus messes, caterers, banquet halls) with orphanages and old-age homes before surplus food goes to waste. Recipients place requests against live batches, and a request-acceptance workflow prevents overbooking across concurrent, partial-quantity reservations.</p>
+                                        <ul class="mb-4">
+                                            <li>AI conversational assistant and demand-prediction module powered by the Google Gemini API, with role-based authorization so the assistant only sees each user's permitted data.</li>
+                                            <li>Verification-first access control with separate donor and recipient logins, real-time in-app chat triggered when a request is accepted, and an auto-expiring, time-bound donation lifecycle.</li>
+                                            <li>Deployed on Render with CI-linked builds and environment-based secrets management; builds, server startup, and API responses were validated end to end before release.</li>
+                                        </ul>
+                                        <p><strong>Technologies:</strong><br>React/Vite &bull; Node.js/Express &bull; TypeScript &bull; Google Gemini API &bull; Render</p>
+                                        <a class="btn btn-primary px-4 py-2 fw-bolder" href="https://unique-foodloop-ai.onrender.com" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Live Demo</a>
+                                    </div>
+                                    <!-- Screenshot carousel-->
+                                    <div id="foodloopCarousel" class="carousel slide bg-light project-carousel" data-bs-ride="false">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#foodloopCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Landing page"></button>
+                                            <button type="button" data-bs-target="#foodloopCarousel" data-bs-slide-to="1" aria-label="Donor dashboard"></button>
+                                            <button type="button" data-bs-target="#foodloopCarousel" data-bs-slide-to="2" aria-label="Recipient dashboard"></button>
+                                            <button type="button" data-bs-target="#foodloopCarousel" data-bs-slide-to="3" aria-label="Donation history"></button>
+                                            <button type="button" data-bs-target="#foodloopCarousel" data-bs-slide-to="4" aria-label="Impact dashboard"></button>
                                         </div>
-                                        <img class="img-fluid" src="assets/AI startup Idea Validation.png" alt="AI Startup Idea Validator"   style="width:450px; height:auto;" />
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="assets/foodloop-home.jpg" class="d-block w-100" alt="FoodLoop AI landing page with the four-step donation lifecycle" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-dark">Landing page</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/foodloop-donor.jpg" class="d-block w-100" alt="Donor dashboard showing recent requests and active donations" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-dark">Donor dashboard</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/foodloop-recipient.jpg" class="d-block w-100" alt="Recipient dashboard listing nearby verified surplus food batches" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-dark">Recipient dashboard</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/foodloop-history.jpg" class="d-block w-100" alt="Donation history and lifecycle table" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-dark">Donation history</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/foodloop-impact.jpg" class="d-block w-100" alt="Impact dashboard with redistribution and sustainability metrics" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-dark">Impact dashboard (demo data)</span></div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#foodloopCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#foodloopCarousel" data-bs-slide="next"><span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Project Card 2-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
+                            <!-- Project Card 2: AI Startup Idea Validator-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                                 <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Smart School Management System</h2>
-                                            <p>Developed a web-based School Management System to simplify academic administration by managing student records, teacher information, attendance, and course details. The application provides an organized interface for efficient school management using modern web technologies.</p>
-                                            <p><strong>Technologies:</strong><br>Python • Django • PostgreSQL • Bootstrap • Git • HTML • CSS</p>
+                                    <div class="p-5">
+                                        <h2 class="fw-bolder">AI Startup Idea Validator</h2>
+                                        <p>Built during my Infosys Springboard AI internship: a multi-agent platform that evaluates startup ideas through market research, competitor analysis, SWOT analysis, MVP recommendations, and go-to-market strategy generation. Specialized agents built with the Deep Agents framework and DuckDuckGo Search share context and intermediate results through a centralized shared-state architecture, and an AI-powered conversational advisor generates validation reports and interactive recommendations.</p>
+                                        <p><strong>Technologies:</strong><br>Python &bull; Deep Agents &bull; DuckDuckGo Search &bull; Streamlit &bull; FastAPI &bull; PostgreSQL &bull; Docker</p>
+                                        <a class="btn btn-primary px-4 py-2 fw-bolder" href="https://startup-idea-validator-ai.streamlit.app" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Live Demo</a>
+                                    </div>
+                                    <!-- Screenshot carousel (app walkthrough order)-->
+                                    <div id="validatorCarousel" class="carousel slide bg-light project-carousel" data-bs-ride="false">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Login & registration"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="1" aria-label="Idea input"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="2" aria-label="Quick summary"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="3" aria-label="Web search agent"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="4" aria-label="Market analysis"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="5" aria-label="Competitors"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="6" aria-label="SWOT & risk"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="7" aria-label="MVP recommendation"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="8" aria-label="GTM strategy"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="9" aria-label="Viability score"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="10" aria-label="Agent scores"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="11" aria-label="Insights"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="12" aria-label="Full report"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="13" aria-label="Advisor chat"></button>
+                                            <button type="button" data-bs-target="#validatorCarousel" data-bs-slide-to="14" aria-label="History"></button>
                                         </div>
-                                        <img class="img-fluid" src="assets/Smart school management system.png" alt="Smart School Management System"   style="width:450px; height:auto;"/>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="assets/validator-01-login.jpg" class="d-block w-100" alt="Login, registration and forgot-password options" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">1/15 &middot; Login & registration</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-02-input.jpg" class="d-block w-100" alt="Idea input form with budget, timeline and location while the agents run" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">2/15 &middot; Idea input</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-03-summary.jpg" class="d-block w-100" alt="Quick summary and suggestions to improve the idea" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">3/15 &middot; Quick summary</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-04-websearch.jpg" class="d-block w-100" alt="Live market and competitor data from the web search agent" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">4/15 &middot; Web search agent</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-05-market.jpg" class="d-block w-100" alt="Market analysis tab" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">5/15 &middot; Market analysis</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-06-competitors.jpg" class="d-block w-100" alt="Competitor analysis tab" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">6/15 &middot; Competitors</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-07-swot.jpg" class="d-block w-100" alt="SWOT and risk analysis tab" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">7/15 &middot; SWOT & risk</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-08-mvp.jpg" class="d-block w-100" alt="MVP recommendation with prioritized features" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">8/15 &middot; MVP recommendation</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-09-gtm.jpg" class="d-block w-100" alt="Go-to-market strategy tab" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">9/15 &middot; GTM strategy</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-10-viability.jpg" class="d-block w-100" alt="Overall viability score and breakdown" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">10/15 &middot; Viability score</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-11-scores.jpg" class="d-block w-100" alt="Agent score bar chart and radar view" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">11/15 &middot; Agent scores</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-12-insights.jpg" class="d-block w-100" alt="Honest mentor take, elevator pitch and funding paths" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">12/15 &middot; Insights</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-13-report.jpg" class="d-block w-100" alt="Full validation report with PDF download" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">13/15 &middot; Full report</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-14-advisor.jpg" class="d-block w-100" alt="Conversational advisor for follow-up questions" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">14/15 &middot; Advisor chat</span></div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/validator-15-history.jpg" class="d-block w-100" alt="Saved history of validated ideas" loading="lazy" />
+                                                <div class="carousel-caption d-none d-md-block" style="bottom:0.25rem"><span class="badge bg-secondary">15/15 &middot; History</span></div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#validatorCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#validatorCarousel" data-bs-slide="next"><span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
                                     </div>
                                 </div>
                             </div>
